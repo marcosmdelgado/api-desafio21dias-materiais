@@ -7,7 +7,7 @@ namespace api_desafio21dias.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "materiais",
+                name: "tb_materiais",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
@@ -17,14 +17,14 @@ namespace api_desafio21dias.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_materiais", x => x.id);
+                    table.PrimaryKey("pk_tb_materiais_id", x => x.id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "materiais");
+                name: "tb_materiais");
         }
     }
 }
